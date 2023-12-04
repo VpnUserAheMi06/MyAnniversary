@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>💚 Happy Anniversary Minii!!  💚</title>
+    <link rel="icon" href="Images/icon.png">
+</head>
+
+<body style="background-color: red; text-align: center; padding: 20px;">
+
+    <h1>💚 Happy Anniversary Minii!! 💚</h1>
+    <p id="counter" style="font-size: 30px; color: white;"></p>
+    <img src="Images/Main Image.jpg" alt="Anniversary Image" height="600">
+
+    <script>
+        function updateCounter() {
+            // Set the anniversary date (replace with your specific date and format)
+            const anniversaryDate = new Date('December 5, 2021').getTime();
+
+            // Get the current date and time
+            const currentDate = new Date().getTime();
+
+            // Calculate the difference in milliseconds
+            const difference = currentDate - anniversaryDate;
+
+            // Calculate years, days, hours, minutes, and seconds
+            const years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365));
+            const days = Math.floor((difference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+            // Display the result
+            document.getElementById('counter').innerHTML = `It's been ${years} years, ${days} days, ${hours} hours, ${minutes} minutes, and ${seconds} seconds since our wonderful journey began.`;
+        }
+
+        // Initial update
+        updateCounter();
+
+        // Update the counter every second (1000 milliseconds)
+        setInterval(updateCounter, 1000);
+    </script>
+
+    <br>
+    <img src="Images/kiss.gif" alt="kiss gif" height="500">
+    <br>
+    <h1>💚 My Song Just For You 💚</h1>
+    <br>
+    <img src="Images/arrow.png" alt="">
+    <br>
+
+    <audio src="Song/Song.mp4" controls style="width: 100%; max-width: 800px; margin-top: 20px;"></audio>
+    <br>
+
+    <div style="background-color: pink; padding: 10px; margin-top: 20px;">
+        <label for="howMuchLiked" style="font-size: 20px; color: red;">How much did you like it?</label>
+        <br>
+        <input type="radio" id="5star" value="5 star" name="rating">
+        <label style="background-color: pink; margin-right: 5px;" for="5star">5 star</label>
+        <br>
+        <input type="radio" id="4star" value="4 star" name="rating">
+        <label style="background-color: pink; margin-right: 5px;" for="4star">4 star</label>
+        <br>
+        <input type="radio" id="3star" value="3 star" name="rating">
+        <label style="background-color: pink; margin-right: 5px;" for="3star">3 star</label>
+        <br>
+        <input type="radio" id="2star" value="2 star" name="rating">
+        <label style="background-color: pink; margin-right: 5px;" for="2star">2 star</label>
+        <br>
+        <input type="radio" id="1star" value="1 star" name="rating">
+        <label style="background-color: pink; margin-right: 5px;" for="1star">1 star</label>
+        <br>
+        
+    </div>
+
+</body>
+
+</html>
